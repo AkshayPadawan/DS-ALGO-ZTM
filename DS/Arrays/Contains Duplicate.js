@@ -4,11 +4,11 @@
  */
 var containsDuplicate = function (nums) {
   var map = {};
-  for(let i=0;i<nums.length;i++){
+  for (let i = 0; i < nums.length; i++) {
     if (map[nums[i]]) {
       return true;
     } else {
-      map[nums[i]]=true;
+      map[nums[i]] = true;
     }
   }
   return false;
