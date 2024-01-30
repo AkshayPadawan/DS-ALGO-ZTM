@@ -1,16 +1,18 @@
-/**
- * @param {number[]} nums
- * @return {boolean}
- */
-var containsDuplicate = function (nums) {
-  var map = {};
-  for(let i=0;i<nums.length;i++){
-    if (map[nums[i]]) {
-      return true;
-    } else {
-      map[nums[i]]=true;
+function LongestWord(sen) { 
+  let array = sen.split(" ");
+  // code goes here  
+  let maxLength=0;
+  let maxString = "";
+  let i=0;
+  while(i<array.length){
+    if(array[i].length>maxLength){
+      maxLength=array[i].length;
+      maxString=array[i];
     }
+    i++;
   }
-  return false;
-};
-console.log(containsDuplicate([1, 2, 3, 1]));
+  return maxString;
+}
+
+// keep this function call here 
+console.log(LongestWord("hey i love u nandu nandy pandi pillaa nandu"));
